@@ -286,6 +286,7 @@ public:
         if (head == NULL)
         {
             cout << "list is empty\n";
+            delete left;
         }
         else
         {
