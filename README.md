@@ -1,31 +1,39 @@
-# University Data Structure System: Linked Lists
+# Node-Based Linked Lists Implementation
 
-A comprehensive C++ CLI application demonstrating the implementation and manipulation of three types of Linked Lists. This project was developed as part of the Software Engineering curriculum to master pointer management and dynamic memory allocation.
+A comprehensive C++ collection demonstrating the implementation and manipulation of the three fundamental types of Linked Lists. This repository serves as a practical guide for mastering pointer management, dynamic memory allocation, and linear data structures.
 
 ## 🚀 Features
 
 - **Singly Linked List:** Standard one-way traversal with insertion and deletion at any position.
-- **Doubly Linked List:** Two-way traversal (`prev` and `next` pointers) with forward and backward display modes.
-- **Circular Linked List:** A closed-loop system where the tail connects back to the head.
-- **Robust Input Validation:** Prevents program crashes from non-integer inputs.
-- **Interactive UI:** Includes a simulated processing animation for better user feedback.
+- **Doubly Linked List:** Efficient two-way traversal using `prev` and `next` pointers, featuring both Forward and Backward display modes.
+- **Circular Linked List:** A closed-loop system where the last node points back to the head, ideal for buffer-style logic.
+- **Robust CLI:** Interactive menu system with input validation to prevent crashes from non-integer entries.
+- **UX Visuals:** Includes a simulated `loading()` bar to provide clear feedback during pointer re-linking.
 
-## 🛠️ Technical Implementation
+## 🛠️ Technical Overview
 
-### Data Structures
+### Core Logic
 
-- **Nodes:** Objects containing `int data`, and pointers for `*next` and `*prev`.
-- **Memory Management:** Manual allocation using `new` and deallocation using `delete` to prevent memory leaks.
+- **Memory Management:** Strictly uses `new` for allocation and `delete` for deallocation to ensure zero memory leaks during node removal.
+- **Node Architecture:** Objects contain `int data` and directional pointers (`*next`, `*prev`).
+- **Traversal Algorithms:** Linear search implementations for `InsertLeft`, `InsertRight`, and `DeleteByPosition`.
 
-### Algorithms
+### Complexity Reference
 
-- **Search-based Insertion:** `InsertLeft` and `InsertRight` use linear search to find target values before linking new nodes.
-- **Position-based Deletion:** Traverses to a specific index to re-link surrounding nodes.
+| Operation        | Singly | Doubly | Circular |
+| :--------------- | :----- | :----- | :------- |
+| **Insert Front** | O(1)   | O(1)   | O(n)\*   |
+| **Insert End**   | O(n)   | O(1)   | O(n)     |
+| **Search**       | O(n)   | O(n)   | O(n)     |
+| **Delete Pos**   | O(n)   | O(n)   | O(n)     |
 
-## 🖥️ How to Run
+_\*O(n) in this implementation due to head-to-tail traversal requirement._
 
-1. **Prerequisites:** Ensure you have a C++ compiler (like `g++`) installed.
-2. **Compilation:**
-   ```bash
-   g++ main.cpp -o LinkedListSystem
-   ```
+## 🖥️ Getting Started
+
+### Clone the Repository
+
+```bash
+git clone git@github.com:abuki-dev/node-linked-lists.git
+cd node-linked-lists
+```
