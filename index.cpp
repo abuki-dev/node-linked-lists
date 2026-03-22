@@ -6,7 +6,7 @@ void loading()
     cout << "Processing: [";
     for (int i = 0; i < 10; i++)
     {
-        sleep(1); // Small 1s delay
+        usleep(500000); // Small 1s delay
         cout << "#";
     }
     cout << "] Done!\n";
